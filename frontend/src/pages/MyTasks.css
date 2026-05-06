@@ -1,0 +1,7 @@
+.my-tasks { max-width: 800px; }
+
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
