@@ -1,14 +1,9 @@
-import axios from 'axios'
+﻿import axios from 'axios'
 
-<<<<<<< HEAD
 const BASE_URL = import.meta.env.VITE_API_URL || ''
 
 const api = axios.create({
   baseURL: `${BASE_URL}/api`,
-=======
-const api = axios.create({
-  baseURL: '/api',
->>>>>>> 9778d47e2ecea5b6ad6a962cef8299a81e65e66e
   headers: { 'Content-Type': 'application/json' }
 })
 
@@ -30,19 +25,14 @@ api.interceptors.response.use(
   }
 )
 
-// Auth
 export const register = (data) => api.post('/auth/register', data)
 export const login = (data) => api.post('/auth/login', data)
-
-// Projects
 export const getProjects = () => api.get('/projects')
 export const getProject = (id) => api.get(`/projects/${id}`)
 export const createProject = (data) => api.post('/projects', data)
 export const updateProject = (id, data) => api.put(`/projects/${id}`, data)
 export const deleteProject = (id) => api.delete(`/projects/${id}`)
 export const getAllUsers = () => api.get('/projects/users')
-
-// Tasks
 export const getTasksByProject = (projectId) => api.get(`/tasks/project/${projectId}`)
 export const getMyTasks = () => api.get('/tasks/my')
 export const getDashboard = () => api.get('/tasks/dashboard')
