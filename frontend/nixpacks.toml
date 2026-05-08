@@ -1,0 +1,2 @@
+[variables]
+VITE_API_URL = "https://team-task-manager-production-31fd.up.railway.app"
